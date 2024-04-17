@@ -11,3 +11,9 @@ This iOS application is designed for **Offline Social Media Application** Using 
 ## Asserts 
 
 <img src="https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_01.png" width="200" />
+<img src="https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_02.png" width="200" />
+<img src="https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_03.png" width="200" />
+<img src="https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_04.png" width="200" />
+<img src="https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_05.png" width="200" />
+<img src="https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_06.png" width="200" />
+<img src="https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_07.png" width="200" />
