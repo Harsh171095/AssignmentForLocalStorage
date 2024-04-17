@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImagesCell" customModule="AssignmentForLocalStorage" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="157"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="163" height="157"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s4q-b4-Uxf">
+                        <rect key="frame" x="0.0" y="10" width="153" height="147"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhP-DN-2kk">
+                        <rect key="frame" x="128" y="0.0" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Fr2-PH-IHe"/>
+                            <constraint firstAttribute="width" secondItem="FhP-DN-2kk" secondAttribute="height" id="zDX-dh-E83"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="cancel"/>
+                        <connections>
+                            <action selector="clickOn_cancel" destination="gTV-IL-0wX" eventType="touchUpInside" id="Lxn-IM-jXM"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="s4q-b4-Uxf" secondAttribute="bottom" id="DNR-tC-eet"/>
+                <constraint firstItem="s4q-b4-Uxf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FIl-Ng-cVW"/>
+                <constraint firstItem="s4q-b4-Uxf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Jl9-UG-iJQ"/>
+                <constraint firstAttribute="trailing" secondItem="s4q-b4-Uxf" secondAttribute="trailing" constant="10" id="NuX-63-am1"/>
+                <constraint firstAttribute="trailing" secondItem="FhP-DN-2kk" secondAttribute="trailing" id="un9-dN-fLd"/>
+                <constraint firstItem="FhP-DN-2kk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="v5S-pL-ONz"/>
+            </constraints>
+            <size key="customSize" width="163" height="157"/>
+            <connections>
+                <outlet property="btnCancel" destination="FhP-DN-2kk" id="UWM-ek-ORP"/>
+                <outlet property="constRight" destination="NuX-63-am1" id="E4A-ga-B3O"/>
+                <outlet property="constTop" destination="Jl9-UG-iJQ" id="cYb-yJ-Xrb"/>
+                <outlet property="imagePost" destination="s4q-b4-Uxf" id="8fG-9U-mTs"/>
+            </connections>
+            <point key="canvasLocation" x="151.90839694656489" y="57.394366197183103"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cancel" width="32" height="32"/>
+    </resources>
+</document>
