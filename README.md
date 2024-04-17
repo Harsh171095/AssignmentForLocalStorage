@@ -1,1 +1,13 @@
 # AssignmentForLocalStorage
+
+This iOS application is designed for **Offline Social Media Application** Using **Core Data CRUD operation**.  Where You can Create a Post, like , Comment, like Comment etc.
+# **Features**
+
+ - Login: User can create a session if already have register.
+ - Register: You can register with your name, email, password.
+ - Dashboard: Where You can able to see all post's.
+ - Create a Post: Where you can create a post using name, your thoughts, and select image from gallery.
+ - profile: You can also update your profile.
+## Asserts 
+
+![Login ](https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_01.png)     ![Register ](https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_02.png)![Dashboard(Post List)](https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_03.png)![Comments](https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_04.png)![Create Post](https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_05.png)![New Post](https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_06.png)![New Post Comment](https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_07.png)

@@ -23,6 +23,9 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        txtFullName.text = AuthUser.user?.name ?? ""
+        txtEmail.text = AuthUser.user?.email ?? ""
+        
     }
     
         // Actions
@@ -79,7 +82,6 @@ class ProfileVC: UIViewController {
                     user.name = txtFullName.text ?? ""
                     user.email = txtEmail.text ?? ""
                     user.password = txtPassword.text ?? ""
-                    user.createdAt = "\(Int(Date.now.timeIntervalSince1970))"
                     coreDataManager.updateObject(object: user)
                     self.dismiss(animated: true)
                     showAlert(message: "Profile Updated Successfully.")
