@@ -9,7 +9,7 @@ This iOS application is designed for **Offline Social Media Application** Using 
  - Create a Post: Where you can create a post using name, your thoughts, and select image from gallery.
  - profile: You can also update your profile.
 ## Asserts 
-<p align="center">
+<p align="left">
 <img src="https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_01.png" width="200" />
 <img src="https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_02.png" width="200" />
 <img src="https://github.com/Harsh171095/AssignmentForLocalStorage/blob/main/Assets/ass_03.png" width="200" />
