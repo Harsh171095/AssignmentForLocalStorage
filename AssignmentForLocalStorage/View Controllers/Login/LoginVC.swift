@@ -17,9 +17,8 @@ class LoginVC: UIViewController {
     @IBOutlet private weak var btnLogin : UIButton!
     @IBOutlet private weak var btnRegister : UIButton!
     
-    private var coreDataManager: CoreDataManager  {
-        return CoreDataManager.insatnce
-    }
+    private let viewmodel = LoginViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,18 +47,14 @@ class LoginVC: UIViewController {
     }
     
     @IBAction private func clickOn_login() {
-       let emailValid =  txtEmail.text?.isValidEmail
-        let passwordValid =  txtPassword.text?.isValidPassword
+       
         
-        if ((emailValid?.status ?? false) == false) {
-            showAlert(title: "Validation" ,message: emailValid?.message ?? "")
+        if let message = viewmodel.isUserValid(email: txtEmail.text ?? "", password: txtPassword.text ?? "") {
+             showAlert(title: "Validation" ,message: message)
+            return
         }
-        else if ((passwordValid?.status ?? false) == false) {
-            showAlert(title: "Validation" ,message: emailValid?.message ?? "")
-        }
-        else {
-            login()
-        }
+        
+        login()
     }
     
     @IBAction private func clickOn_register() {
@@ -69,25 +64,18 @@ class LoginVC: UIViewController {
     }
     
     // DB Methods
-    private func login() {
-        
-        let predicate1 = NSPredicate(format: "email == %@", txtEmail.text ?? "")
-        if let useData: [Users] = coreDataManager.fetchObjects(predicates: [predicate1], sortDescriptors: nil) {
-            if (useData.isEmpty) {
-                showAlert(message: "You Are Not Register. Please Register First.")
-            } else if ((useData.first?.password ?? "") != (txtPassword.text ?? "")) {
-                showAlert(message: "Invalid Password. Please Enter valid Password.")
-            } else {
-                AuthUser.updateUserSession(useData.first!)
-                
-                let tabBarController = TabBarVC()
-                let navigationController = UINavigationController(rootViewController: tabBarController)
-                navigationController.isNavigationBarHidden = true
-                rootWindow?.rootViewController = navigationController
-                rootWindow?.makeKeyAndVisible()
-            }
-        } else {
-            showAlert(message: "You Are Not Register. Please Register First.")
+    func login() {
+        do {
+            try viewmodel.login()
+            
+            let tabBarController = TabBarVC()
+            let navigationController = UINavigationController(rootViewController: tabBarController)
+            navigationController.isNavigationBarHidden = true
+            rootWindow?.rootViewController = navigationController
+            rootWindow?.makeKeyAndVisible()
+        }
+        catch(let error) {
+            showAlert(title: (error as NSError).domain ,message: error.localizedDescription)
         }
     }
 }

@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8451C9DA2BDA73C10072668A /* RegisterScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9D92BDA73C10072668A /* RegisterScreenTests.swift */; };
+		8451C9DC2BDA74010072668A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9DB2BDA74010072668A /* RegisterViewModel.swift */; };
+		8451C9E02BDA75770072668A /* RegisterRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9DF2BDA75770072668A /* RegisterRequestModel.swift */; };
 		84ACAF752BCE3CCB0045860F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACAF742BCE3CCB0045860F /* AppDelegate.swift */; };
 		84ACAF772BCE3CCB0045860F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACAF762BCE3CCB0045860F /* SceneDelegate.swift */; };
 		84ACAF792BCE3CCB0045860F /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACAF782BCE3CCB0045860F /* SplashScreenVC.swift */; };
 		84ACAF7F2BCE3CCB0045860F /* AssignmentForLocalStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84ACAF7D2BCE3CCB0045860F /* AssignmentForLocalStorage.xcdatamodeld */; };
 		84ACAF812BCE3CCC0045860F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84ACAF802BCE3CCC0045860F /* Assets.xcassets */; };
 		84ACAF842BCE3CCC0045860F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ACAF822BCE3CCC0045860F /* LaunchScreen.storyboard */; };
-		84ACAF8F2BCE3CCC0045860F /* AssignmentForLocalStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACAF8E2BCE3CCC0045860F /* AssignmentForLocalStorageTests.swift */; };
+		84ACAF8F2BCE3CCC0045860F /* LoginScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACAF8E2BCE3CCC0045860F /* LoginScreenTests.swift */; };
 		84ACAF992BCE3CCC0045860F /* AssignmentForLocalStorageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACAF982BCE3CCC0045860F /* AssignmentForLocalStorageUITests.swift */; };
 		84ACAF9B2BCE3CCC0045860F /* AssignmentForLocalStorageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACAF9A2BCE3CCC0045860F /* AssignmentForLocalStorageUITestsLaunchTests.swift */; };
 		84ACAFAF2BCE43B90045860F /* CoreDataStackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACAFAE2BCE43B90045860F /* CoreDataStackProtocol.swift */; };
@@ -69,6 +72,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8451C9D92BDA73C10072668A /* RegisterScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenTests.swift; sourceTree = "<group>"; };
+		8451C9DB2BDA74010072668A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		8451C9DF2BDA75770072668A /* RegisterRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequestModel.swift; sourceTree = "<group>"; };
 		84ACAF712BCE3CCB0045860F /* AssignmentForLocalStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentForLocalStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ACAF742BCE3CCB0045860F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84ACAF762BCE3CCB0045860F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +84,7 @@
 		84ACAF832BCE3CCC0045860F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84ACAF852BCE3CCC0045860F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84ACAF8A2BCE3CCC0045860F /* AssignmentForLocalStorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentForLocalStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84ACAF8E2BCE3CCC0045860F /* AssignmentForLocalStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentForLocalStorageTests.swift; sourceTree = "<group>"; };
+		84ACAF8E2BCE3CCC0045860F /* LoginScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTests.swift; sourceTree = "<group>"; };
 		84ACAF942BCE3CCC0045860F /* AssignmentForLocalStorageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentForLocalStorageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ACAF982BCE3CCC0045860F /* AssignmentForLocalStorageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentForLocalStorageUITests.swift; sourceTree = "<group>"; };
 		84ACAF9A2BCE3CCC0045860F /* AssignmentForLocalStorageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentForLocalStorageUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -142,6 +148,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8451C9DD2BDA74090072668A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				8451C9DB2BDA74010072668A /* RegisterViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		8451C9DE2BDA75620072668A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8451C9DF2BDA75770072668A /* RegisterRequestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		84ACAF682BCE3CCB0045860F = {
 			isa = PBXGroup;
 			children = (
@@ -181,7 +203,8 @@
 		84ACAF8D2BCE3CCC0045860F /* AssignmentForLocalStorageTests */ = {
 			isa = PBXGroup;
 			children = (
-				84ACAF8E2BCE3CCC0045860F /* AssignmentForLocalStorageTests.swift */,
+				84ACAF8E2BCE3CCC0045860F /* LoginScreenTests.swift */,
+				8451C9D92BDA73C10072668A /* RegisterScreenTests.swift */,
 			);
 			path = AssignmentForLocalStorageTests;
 			sourceTree = "<group>";
@@ -290,6 +313,8 @@
 		84ACAFD02BCE72BF0045860F /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				8451C9DE2BDA75620072668A /* Model */,
+				8451C9DD2BDA74090072668A /* View Model */,
 				84ACAFD12BCE72CB0045860F /* RegisterVC.swift */,
 				84ACAFD22BCE72CB0045860F /* RegisterVC.xib */,
 			);
@@ -507,6 +532,7 @@
 				84ACAF752BCE3CCB0045860F /* AppDelegate.swift in Sources */,
 				84ACB0022BCFD56A0045860F /* CommentsDisplayModel.swift in Sources */,
 				84ACAFC02BCE52430045860F /* LoginVC.swift in Sources */,
+				8451C9E02BDA75770072668A /* RegisterRequestModel.swift in Sources */,
 				84ACAFF22BCF9CF70045860F /* AppFileManager.swift in Sources */,
 				84ACB0062BCFD7A00045860F /* CommentCell.swift in Sources */,
 				84ACAFCB2BCE5B010045860F /* ForgotPasswordVC.swift in Sources */,
@@ -525,6 +551,7 @@
 				84ACAF7F2BCE3CCB0045860F /* AssignmentForLocalStorage.xcdatamodeld in Sources */,
 				84ACAFEA2BCEB4B10045860F /* CreatePostVC.swift in Sources */,
 				84ACAF772BCE3CCB0045860F /* SceneDelegate.swift in Sources */,
+				8451C9DC2BDA74010072668A /* RegisterViewModel.swift in Sources */,
 				84ACAFEF2BCF98F10045860F /* ImagesCell.swift in Sources */,
 				84ACAFFA2BCFA7680045860F /* PostCell.swift in Sources */,
 				84ACAFCF2BCE6F040045860F /* Constant.swift in Sources */,
@@ -536,7 +563,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84ACAF8F2BCE3CCC0045860F /* AssignmentForLocalStorageTests.swift in Sources */,
+				8451C9DA2BDA73C10072668A /* RegisterScreenTests.swift in Sources */,
+				84ACAF8F2BCE3CCC0045860F /* LoginScreenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,9 +18,7 @@ class RegisterVC: UIViewController {
     @IBOutlet private weak var txtConfirmPassword : UITextField!
     
     // Variables
-    private var coreDataManager: CoreDataManager  {
-        return CoreDataManager.insatnce
-    }
+    private var viewmodel = RegisterViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,57 +32,19 @@ class RegisterVC: UIViewController {
 
     // Actions
     @IBAction private func clickOn_register() {
-        let fullNameValid =  txtFullName.text?.isValidFullName
-        let emailValid =  txtEmail.text?.isValidEmail
-        let passwordValid =  txtPassword.text?.isValidPassword
-        let confirmPasswordValid =  txtPassword.text?.isValidConfirmPassword(old: txtPassword.text ?? "")
+        let userModel = RegisterRequestModel(
+            fullName: txtFullName.text ?? "",
+            email: txtEmail.text ?? "",
+            password: txtPassword.text ?? "",
+            confirmPassword: txtPassword.text ?? "")
         
-        if ((fullNameValid?.status ?? false) == false)
-        {
-            showAlert(title: "Validation" ,message: fullNameValid?.message ?? "")
-        }
-        else if ((emailValid?.status ?? false) == false)
-        {
-            showAlert(title: "Validation" ,message: emailValid?.message ?? "")
-        }
-        else if ((passwordValid?.status ?? false) == false)
-        {
-            showAlert(title: "Validation" ,message: passwordValid?.message ?? "")
-        }
-        else if ((confirmPasswordValid?.status ?? false) == false)
-        {
-            showAlert(title: "Validation" ,message: confirmPasswordValid?.message ?? "")
-        }
-        else
-        {
-            register()
+        do {
+            try viewmodel.isUserValid(userModel: userModel)
+            try viewmodel.register()
+            self.dismiss(animated: true)
+        } catch(let error) {
+            showAlert(title: (error as NSError).domain ,message: error.localizedDescription)
         }
     }
     
-    
-        // DB Methods
-    private func register() {
-        
-        let predicate1 = NSPredicate(format: "email == %@", txtEmail.text ?? "")
-        if let useData: [Users] = coreDataManager.fetchObjects(predicates: [predicate1], sortDescriptors: nil) {
-            if (useData.isEmpty == false) {
-                showAlert(message: "You Are Already Register. Please Login.")
-            } else {
-                if let user: Users = coreDataManager.createObject() {
-                    user.id = UUID().uuidString
-                    user.name = txtFullName.text ?? ""
-                    user.email = txtEmail.text ?? ""
-                    user.password = txtPassword.text ?? ""
-                    user.createdAt = "\(Int(Date.now.timeIntervalSince1970))"
-                    coreDataManager.updateObject(object: user)
-                    self.dismiss(animated: true)
-                    showAlert(message: "You Are Register Successfully.")
-                } else {
-                    showAlert(message: "Internal Error.")
-                }
-            }
-        } else {
-            showAlert(message: "Internal Error.")
-        }
-    }
 }
