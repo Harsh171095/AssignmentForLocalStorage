@@ -1,6 +1,6 @@
 # AssignmentForLocalStorage
 
-This iOS application is designed for **Offline Social Media Application** Using **Core Data CRUD operation**.  Where You can Create a Post, like , Comment, like Comment etc.
+This iOS application is designed for **Offline Social Media Application** Using **Core Data CRUD operation**.  Where You can Create a Post, like , Comment, like Comment etc. Also Write a Unit Test Cases for Login and Register Screen.
 # **Features**
 
  - Login: User can create a session if already have register.
